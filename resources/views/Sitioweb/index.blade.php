@@ -71,10 +71,8 @@
 
             <section class="mision">
                 <h4>MISION</h4>
-                @foreach($getInicio as $getInicios)
-                <P>{{$getInicios->mision}} </P>
-
-                @endforeach
+                
+                <P> </P>
                 
             </section>
             

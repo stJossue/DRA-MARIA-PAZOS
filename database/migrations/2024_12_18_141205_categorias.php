@@ -1,11 +1,10 @@
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Inicios extends Migration
+class Categorias extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +13,14 @@ class Inicios extends Migration
      */
     public function up()
     {
-        Schema::create('inicios', function(Blueprint $table){
+       
+        Schema::create('categorias', function(Blueprint $table){
             $table->id();
-            $table->text('mision');
+            $table->string('nombreCT');
+            $table->enum('status',['ACTIVE','DESACTIVATE'])->default('ACTIVE');
             $table->timestamps();
-         });
-
-
+        });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -30,6 +28,6 @@ class Inicios extends Migration
      */
     public function down()
     {
-        Schema::dropitfExists('inicios');
+        Schema::dropIfExists('categorias');
     }
 }

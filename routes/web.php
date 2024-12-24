@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginaController;
+use App\Http\Controllers\panel\MisVisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,7 @@ use App\Http\Controllers\PaginaController;
 */
 
 Route::get('/',[PaginaController::Class, 'Inicio']);
+Route::get('/admin',[PaginaController::Class, 'paneldecontrol']);
+
+Route::get('/MisVis',[MisVisController::class,'index']);
+Route::get('/CreateMisVis', [MisVisController::class,'create']);

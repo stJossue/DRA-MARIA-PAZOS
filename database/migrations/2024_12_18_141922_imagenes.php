@@ -1,11 +1,10 @@
-
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Inicios extends Migration
+class Imagenes extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +13,13 @@ class Inicios extends Migration
      */
     public function up()
     {
-        Schema::create('inicios', function(Blueprint $table){
+        
+        Schema::create('imagenes', function(Blueprint $table){
             $table->id();
-            $table->text('mision');
+            $table->text('imgURL');
+            $table->enum('status',['ACTIVE','DESACTIVATE'])->default('ACTIVE');
             $table->timestamps();
-         });
-
-
+        });
     }
 
     /**
@@ -30,6 +29,6 @@ class Inicios extends Migration
      */
     public function down()
     {
-        Schema::dropitfExists('inicios');
+        Schema::dropIfExists('imagenes');
     }
 }
