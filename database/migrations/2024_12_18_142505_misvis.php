@@ -13,14 +13,18 @@ class Misvis extends Migration
      */
     public function up()
     {
-        Schema::create('misvis', function(Blueprint $table){
+        Schema::create('MisVis', function(Blueprint $table){
             $table->id();
-            $table->text('texto');
-            $table->text('url');
-            $table->enum('status',['ACTIVE','DESACTIVATE'])->default('ACTIVE');
-            $table->unsignedBigInteger('imagenes_id');
-            //$table->foreign('imagenes_id')->references('id')->on('imagenes');
+            $table->text('name');
+            $table->text('imagen');
+            $table->enum('status',['ACTIVE','DEACTIVATE'])->default('ACTIVE');
             $table->timestamps();
+           
+            
+            //$table->text('texto');
+           // $table->text('url');
+            //$table->enum('status',['ACTIVE','DESACTIVATE'])->default('ACTIVE');
+            //$table->foreign('imagenes_id')->references('id')->on('imagenes');
         });
     }
 

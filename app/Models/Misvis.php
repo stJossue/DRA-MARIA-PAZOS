@@ -9,8 +9,7 @@ class Misvis extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'texto',
-        'url',
-        'imagenes_id'
+        'name',
+        'imagen', 'status'
     ];
 }
