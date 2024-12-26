@@ -10,7 +10,7 @@
      <h2>Ingresar Mision y Vision</h2>
 
 
-          <form action="" method="POST" enctype="multipar/form-data">
+          <form action="/storeMisVis" method="POST" enctype="multipar/form-data">
             @csrf
             @method('POST')
           <label for="">Nombre</label>

@@ -11,6 +11,16 @@ class MisVisController extends Controller
         return view('Adminpc.MisVis.index');
     }
 
+    public function store(Request $request){
+        dd($request);
+     //   MisVis::create($request->all());
+     //   return redirect()->to('/MisVis');
+    }
+
+    public function create(){
+        return view('Adminpc.MisVis.create');
+    }
+
     public function edit(){
         return view('Admin.MisVis.edit');
     }

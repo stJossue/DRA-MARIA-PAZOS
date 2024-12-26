@@ -15,9 +15,10 @@ use App\Http\Controllers\panel\MisVisController;
 |
 */
 
-Route::get('/',[PaginaController::Class, 'Inicio']);
-Route::get('/admin',[PaginaController::Class, 'paneldecontrol']);
+Route::get('/',[PaginaController::class, 'Inicio']);
+Route::get('/admin',[PaginaController::class, 'paneldecontrol']);
+
 //Mision y Vision
 Route::get('/MisVis',[MisVisController::class,'index']);
 Route::get('/CreateMisVis', [MisVisController::class,'create']);
-Route::get('/storeMisVis', [MisVisController::class,'store']);
+Route::post('/storeMisVis', [MisVisController::class,'store']);
